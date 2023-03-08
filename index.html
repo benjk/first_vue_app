@@ -6,7 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="container" id="app">
@@ -21,7 +21,9 @@
                 <li v-for="user in users">{{ user }}</li>
             </ul>
             <input type="text" v-model="user"></br>
-            <label for="mcheckbox">Forcer profil:</label>
+            <label for="mcheckbox" :class="{red: forceProfil, black: !forceProfil}">Forcer profil:</label></br>
+            <label for="mcheckbox" :class="setClass()">Forcer profil:</label></br>
+            <label for="mcheckbox" :style="{color : style()}">Forcer profil:</label>
             <input id="mcheckbox" type="checkbox" v-model="forceProfil">
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

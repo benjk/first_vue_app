@@ -13,6 +13,22 @@ const { createApp } = Vue
     methods: {
         increment() {
             this.count++;
+        },
+
+        style(){
+            if (this.forceProfil){
+                return 'red'
+            } else {
+                return 'black'
+            }
+        },
+
+        setClass(){
+            if (this.forceProfil){
+                return 'red'
+            } else {
+                return 'black'
+            }
         }
     }
   }).mount('#app')
