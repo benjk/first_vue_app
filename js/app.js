@@ -6,7 +6,8 @@ const { createApp } = Vue
         user: 'Ben',
         count: 0,
         link: "https://www.malt.fr/profile/benjaminkielinski",
-        users: ['Ben', 'PP', 'Toine', 'Riton']
+        users: ['Ben', 'PP', 'Toine', 'Riton'],
+        forceProfil: false
       }
     },
     methods: {

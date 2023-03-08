@@ -14,12 +14,15 @@
             <!-- Ici le binding v-bind permet d'utiliser les propriétés réactives avec les attributs -->
             <!-- <a v-if="count > 5" v-bind:href="link">Mon profil</br></a> -->
             <!-- autre écriture raccourcie avec les : -->
-            <a v-if="count > 5" :href="link">Mon profil</br></a>
+            <a v-if="count > 5 || forceProfil" :href="link">Mon profil</br></a>
             <p v-else>Clique plusieurs fois pour afficher le profil</p>
             <button @click="increment">Count is: {{ count }}</button>
             <ul>
                 <li v-for="user in users">{{ user }}</li>
             </ul>
+            <input type="text" v-model="user"></br>
+            <label for="mcheckbox">Forcer profil:</label>
+            <input id="mcheckbox" type="checkbox" v-model="forceProfil">
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- <script src="https://unpkg.com/vue@3/dist/vue.esm-browser.js"></script> -->
