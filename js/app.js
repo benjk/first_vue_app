@@ -8,5 +8,10 @@ const { createApp } = Vue
         link: "https://www.malt.fr/profile/benjaminkielinski",
         users: ['Ben', 'PP', 'Toine', 'Riton']
       }
+    },
+    methods: {
+        increment() {
+            this.count++;
+        }
     }
   }).mount('#app')
