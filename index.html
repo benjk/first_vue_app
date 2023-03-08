@@ -11,6 +11,11 @@
     <body>
         <div class="container" id="app">
             <h1>Hello {{ user }}</h1>
+            <!-- Ici le binding v-bind permet d'utiliser les propriétés réactives avec les attributs -->
+            <!-- <a v-if="count > 5" v-bind:href="link">Mon profil</br></a> -->
+            <!-- autre écriture raccourcie avec les : -->
+            <a v-if="count > 5" :href="link">Mon profil</br></a>
+            <p v-else>Clique plusieurs fois pour afficher le profil</p>
             <button @click="count++">Count is: {{ count }}</button>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

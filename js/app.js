@@ -4,7 +4,8 @@ const { createApp } = Vue
     data() {
       return {
         user: 'Ben',
-        count: 0
+        count: 0,
+        link: "https://www.malt.fr/profile/benjaminkielinski"
       }
     }
   }).mount('#app')
